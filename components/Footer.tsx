@@ -1,115 +1,85 @@
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">L</span>
-              </div>
-              <span className="text-xl font-bold">Logicspice</span>
-            </div>
-            <p className="text-gray-400 mb-6">
-              Leading software development company providing dedicated developers and custom solutions worldwide.
-            </p>
-            <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-emerald-500 cursor-pointer transition-colors">
-                <span className="text-sm">f</span>
-              </div>
-              <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-emerald-500 cursor-pointer transition-colors">
-                <span className="text-sm">t</span>
-              </div>
-              <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-emerald-500 cursor-pointer transition-colors">
-                <span className="text-sm">in</span>
-              </div>
-              <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-emerald-500 cursor-pointer transition-colors">
-                <span className="text-sm">ig</span>
-              </div>
-            </div>
-          </div>
+    <footer className="bg-black text-white">
+      {/* Main Footer */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-bold mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Our Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Testimonials
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-bold mb-6">Services</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Web Development
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Mobile Development
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Custom Software
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  E-commerce Solutions
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Digital Marketing
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Us */}
-          <div>
-            <h3 className="text-lg font-bold mb-6">Contact Us</h3>
-            <div className="space-y-3 text-gray-400">
-              <p>📍 123 Business Street, Tech City, TC 12345</p>
-              <p>📞 +1 (555) 123-4567</p>
-              <p>✉️ info@logicspice.com</p>
-              <p>🌐 www.logicspice.com</p>
+        {/* Logo & Description */}
+        <div>
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center">
+              {/* Replace with actual logo */}
+              <span className="text-black font-bold text-lg">⚡</span>
             </div>
+            <span className="text-xl font-bold">Logoipsum</span>
+          </div>
+          <p className="text-gray-300 leading-relaxed mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          </p>
+          <div className="flex space-x-3">
+            {["f", "t", "in", "▶"].map((icon, i) => (
+              <div
+                key={i}
+                className="w-9 h-9 bg-white text-emerald-500 rounded-full flex items-center justify-center cursor-pointer hover:bg-emerald-500 hover:text-white transition-colors"
+              >
+                {icon}
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-          <p className="text-gray-400">© 2024 Logicspice. All rights reserved. | Privacy Policy | Terms of Service</p>
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-bold mb-6">Quick Links</h3>
+          <ul className="space-y-3">
+            {["Software Team", "Technologies", "Resources", "Company", "Contact us", "FAQ"].map((link, i) => (
+              <li key={i}>
+                <a href="#" className="text-gray-300 hover:text-emerald-500 transition-colors">
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Services */}
+        <div>
+          <h3 className="text-lg font-bold mb-6">Services</h3>
+          <ul className="space-y-3">
+            {["Dedicated Development", "Staff Augmentation Services", "Software Development", "Development Center"].map((service, i) => (
+              <li key={i}>
+                <a href="#" className="text-gray-300 hover:text-emerald-500 transition-colors">
+                  {service}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact Us */}
+        <div>
+          <h3 className="text-lg font-bold mb-6">Contact Us</h3>
+          <ul className="space-y-4 text-gray-300">
+            <li className="flex items-start space-x-3">
+              <span className="text-emerald-500">📍</span>
+              <span>Envato, Level 13, 2 Elizabeth Victoria 3000 India</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              <span className="text-emerald-500">📞</span>
+              <span>+91 861 944 1176</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              <span className="text-emerald-500">✉️</span>
+              <span>ezyoga@gmail.com</span>
+            </li>
+          </ul>
         </div>
       </div>
+
+      {/* Bottom Bar */}
+      <div className="bg-emerald-500 py-4 text-center text-white font-medium">
+        logoname. 2023. All rights reserved
+      </div>
     </footer>
-  )
+  );
 }

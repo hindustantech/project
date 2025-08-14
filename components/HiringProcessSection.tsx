@@ -1,4 +1,4 @@
-import { Search, Users, Handshake, Rocket } from "lucide-react"
+import { Search, Users, Handshake, Rocket, ArrowRight } from "lucide-react"
 
 export default function HiringProcessSection() {
   const steps = [
@@ -25,28 +25,48 @@ export default function HiringProcessSection() {
   ]
 
   return (
-    <section className="py-20 bg-pink-50">
+    <section className="py-20 bg-gradient-to-r from-green-50 to-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Hiring Process</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Simple and straightforward process to get your dedicated development team ready within 48 hours
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Steps */}
+        <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {steps.map((step, index) => (
-            <div key={index} className="text-center">
-              <div className="relative mb-6">
-                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto shadow-lg border-4 border-coral-200">
-                  <step.icon className="w-8 h-8 text-coral-500" />
+            <div key={index} className="relative flex flex-col items-center text-center">
+              {/* Circle */}
+              <div className="relative w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-green-400">
+                <step.icon className="w-10 h-10 text-gray-800" />
+                {/* Number badge */}
+                <div className="absolute -top-3 -right-3 w-10 h-10 bg-pink-500 text-white rounded-full flex items-center justify-center text-sm font-bold shadow-md">
+                  {index + 1}
                 </div>
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-coral-200 -translate-x-1/2"></div>
-                )}
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h3>
-              <p className="text-gray-600">{step.description}</p>
+
+              {/* Arrow for Desktop */}
+              {/* Arrow for Desktop */}
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-16 right-[-40px]">
+                  <ArrowRight className="w-8 h-8 text-gray-400" />
+                </div>
+              )}
+
+
+              {/* Arrow for Mobile */}
+              {index < steps.length - 1 && (
+                <div className="lg:hidden mt-6">
+                  <ArrowRight className="w-6 h-6 text-gray-400 rotate-90" />
+                </div>
+              )}
+
+              {/* Text */}
+              <h3 className="mt-6 text-lg font-bold text-gray-900">{step.title}</h3>
+              <p className="text-gray-600 mt-2">{step.description}</p>
             </div>
           ))}
         </div>

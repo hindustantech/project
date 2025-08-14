@@ -16,7 +16,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <WhyHireSection />
-      <RigorousVettingSection />
+      {/* <RigorousVettingSection /> */}
       <TechnologySection />
       <WhyIndiaSection />
       <TrustedCompaniesSection />

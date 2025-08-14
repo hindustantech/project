@@ -36,10 +36,9 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
-            <Button variant="outline" className="hidden sm:inline-flex bg-transparent">
-              Hire A Team
+            <Button variant="outline" className="hidden border-[#2DC67D] sm:inline-flex bg-transparent">
+             Get in Toch  
             </Button>
-            <Button className="bg-emerald-500 hover:bg-emerald-600">Get A Quote</Button>
           </div>
         </div>
       </div>
